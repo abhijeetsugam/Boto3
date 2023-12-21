@@ -2,7 +2,7 @@ import boto3
 import os
 import json
 
-#create s3 bucket  using CLIENT
+#create s3 bucket  using CLIENT method
 
 s3 = boto3.client('s3')
 response = s3.create_bucket(Bucket='sugam-buc-1')
@@ -11,6 +11,7 @@ response = s3.create_bucket(Bucket='sugam-buc-1')
 # list all buckets
 
 response = s3.list_buckets()
+print(response.items())
 # print(response)
 
 #listing only the name of buckets
