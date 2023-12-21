@@ -14,8 +14,9 @@ for key in response['Contents']:
     s3.delete_object(Bucket=bucket_name, Key=key['Key'])
 
 
-# delete bucket
-s3.delete_bucket(Bucket=bucket_name)
+# delete bucket ( only possible when bucket is empty)
+    
+#s3.delete_bucket(Bucket=bucket_name)
 
 
 
