@@ -18,10 +18,11 @@ for key, val in response.items():
 
 
 # print all files name from folder
-# for item in os.listdir('C:/Users/abhij/OneDrive/Documents/DE_project/youtube_project'):
-#     if item.endswith(".json"):
-#         # upload file to s3 bucket
-#         s3.upload_file('C:/Users/abhij/OneDrive/Documents/DE_project/youtube_project/'+item, bucket_name, item)
+                
+for item in os.listdir('C:/Users/abhij/OneDrive/Documents/DE_project/youtube_project'):
+    if item.endswith(".json"):
+        # upload file to s3 bucket
+        s3.upload_file('C:/Users/abhij/OneDrive/Documents/DE_project/youtube_project/'+item, bucket_name, item)
 
 # print all files name from bucket
 response = s3.list_objects(Bucket=bucket_name)
